@@ -33,6 +33,8 @@ container.resolve(function(users) {
   }
 
   function ConfigureExpress(app) {
+    require('./services/passport');
+
     app.use(express.static('public'));
     app.use(cookieParser());
     app.set('view engine', 'ejs');
